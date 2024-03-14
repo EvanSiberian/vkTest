@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Корзина Товаров для Интернет-Магазина
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
 
-## Available Scripts
+Это React-приложение предназначено для работы с корзиной интернет-магазина. Приложение позволяет пользователям просматривать список товаров в корзине, изменять количество товаров и удалять их из корзины.
 
-In the project directory, you can run:
+## Функциональность
 
-### `npm start`
+- Вывод списка товаров в корзине с информацией о каждом товаре: фотография, название, количество и стоимость.
+- Возможность изменения количества товара в корзине с помощью кнопок `+` и `-`, с ограничениями от 1 до 10 единиц каждого товара.
+- Удаление товара из корзины.
+- Вывод итоговой суммы заказа, учитывающей количество каждого товара.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Технические требования
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Макет с разделением экрана на 2 колонки: левая для списка товаров и правая для итоговой суммы.
+- Адаптивная верстка с применением flexbox или grid систем.
+- Использование TypeScript для типизации компонентов и функций.
+- Стилизация с использованием CSS и подходов flexbox/grid (Material UI).
+- Хранение состояния приложения с применением state-менеджера (Redux + Redux Toolkit).
 
-### `npm test`
+## Компоненты
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `CartItem`: компонент для отображения информации о товаре в корзине.
+- `CartList`: компонент для отображения списка `CartItem`.
+- `CartTotal`: компонент для отображения итоговой суммы заказа.
 
-### `npm run build`
+## API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Данные можно получить из следующих источников:
+- Корзина: `https://dummyjson.com/carts/1`

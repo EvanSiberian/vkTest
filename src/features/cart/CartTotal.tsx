@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { Typography, Box } from '@mui/material';
 import { RootState } from '../../app/store';
 
+// Вывод в долларах вместо рублей потому что так в исходных данных
+
 const CartTotal: React.FC = () => {
     const total = useSelector((state: RootState) => state.cart.total);
     const discountedTotal = useSelector((state: RootState) => state.cart.discountedTotal);
